@@ -3,7 +3,7 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 trigger:
-- main
+- master
 
 # TODO: Replace the agent pool name
 pool: myAgentPool
@@ -16,17 +16,7 @@ variables:
   webAppName: 'my-flask-ml-service-96'
 
   # Environment name
-  - task: AzureWebApp@1
-  inputs:
-    azureSubscription: 'TestFlask'
-    appType: 'webAppLinux'
-    appName: 'my-flask-ml-service-96'
-    deployToSlotOrASE: true
-    resourceGroupName: 'Azuredevops'
-    slotName: 'production'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    runtimeStack: 'PYTHON|3.7'
-    startUpCommand: 'python app.py': 'flask-ml-service'
+  environmentName: 'flask-ml-service'
 
   # Project root folder. Point to the folder containing manage.py file.
   projectRoot: $(System.DefaultWorkingDirectory)
