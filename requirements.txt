@@ -25,3 +25,4 @@ typing_extensions==4.3.0
 Werkzeug==2.2.1
 wrapt==1.14.1
 zipp==3.8.1
+locust==2.10.1

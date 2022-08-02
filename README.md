@@ -1,7 +1,17 @@
+[![Python application test with Github Actions](https://github.com/AmrAnwar/azure-devops-cd-cd/actions/workflows/python-app.yml/badge.svg)](https://github.com/AmrAnwar/azure-devops-cd-cd/actions/workflows/python-app.yml)
+
 # Overview
 
 This project is CI/CD implementation to a machine learning prediction web app, The ML model predict houses prices in boston, the web app provide the possibility to use the web app. The CI was written in Github actions, and the CD was created in azure piplines in order to deploy the app automatically.
 
+# Quick Start
+- copy the following commands or use `command.sh` 
+```
+git clone https://github.com/AmrAnwar/azure-devops-cd-cd
+cd azure-devops-cd-cd
+make install
+az webapp up --name my-flask-ml-service-96 --resource-group Azuredevops --runtime "PYTHON:3.7"
+```
 ## Project Plan
 
 * Trello: https://trello.com/invite/b/13PItVH1/f0c224215756538780db65d07f9ae8d3/flask-ml-service
@@ -32,6 +42,8 @@ git clone https://github.com/AmrAnwar/azure-devops-cd-cd
 ![alt text](./images/make-all.png)
 
 * Output of a test run
+![alt text](./images/locust-tests.png)
+![alt text](./images/locust-charts.png)
 ![alt text](./images/pytest.png)
 
 
